@@ -14,6 +14,8 @@ Students who complete this project independently are able to:
 * Use NSNotifcations to respond to events
 * Use UILocalNotifications to alert user of events
 * Use UIAlertControllers to display alerts to user
+* Use UIProgressViews to display progress
+* Use CALayers to modify views' look
 
 ## Guide - Day 1
 
@@ -75,6 +77,14 @@ Build a view that allows the user to input a desired length of time and allows t
 	* HINT: If the timer property is set, this function should decrease the seconds remaining on the timer by 1 and post a secondTickNotification. If the seconds have reached 0, it should also post a timerCompleteNotification and call stopTimer().
 8. Create a func timerString() -> String
 	* HINT: This method should take the number of seconds remaining and create a string that the user would expect to see on a timer.
+
+### Link up the timer UI with the Timer class
+
+1. Implement the startTimerButtonTapped function.
+	* HINT: this method should check whether the user is starting the timer or canceling the timer and the views should update appropriately (button titles, hiding/unhiding pickerStackView, timerLabel, progress view)
+2. Observe the second tick notification. When the viewcontroller observes this notification, it should update it's views; create a function that will update the required view after each second.
+	* HINT: You may need a variable to hold to total number of seconds that user set the timer to so you can update the progress view.
+3. Observe the timerCompleteNotification. The function this notification should call should reset the views to allow the user to start another timer.
 
 ### Black Diamonds
 

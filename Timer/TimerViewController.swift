@@ -17,15 +17,46 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pickerStackView: UIStackView!
     @IBOutlet weak var progressView: UIProgressView!
+    
+    var totalSecondsSetOnTimer = Int(0)
+    
+    let timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateTimerBasedViews", name: Timer.kTimerSecondTickNotification, object: timer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "timerComplete", name: Timer.kTimerCompleteNotification, object: timer)
         
         minutePickerView.selectRow(1, inComponent: 0, animated: false)
         
     }
     
     @IBAction func startButtonTapped() {
+        if timer.isOn {
+            //user wants to cancel timer
+            timer.stopTimer()
+            pickerStackView.hidden = false
+            timerLabel.hidden = true
+            progressView.hidden = true
+            startButton.setTitle("Start", forState: .Normal)
+            
+        } else {
+            timerLabel.hidden = false
+            progressView.setProgress(0.0, animated: false)
+            progressView.hidden = false
+            pickerStackView.hidden = true
+            startButton.setTitle("Cancel", forState: .Normal)
+            
+            let hours = hourPickerView.selectedRowInComponent(0)
+            let minutes = minutePickerView.selectedRowInComponent(0) + (hours * 60)
+            totalSecondsSetOnTimer = minutes * 60
+            
+            timer.setTime(NSTimeInterval(totalSecondsSetOnTimer))
+            updateTimerBasedViews()
+            timer.startTimer()
+        }
+        
     }
     
     @IBAction func pauseButtonTapped(sender: UIButton) {
@@ -48,6 +79,35 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(row)
     }
+    
+    //MARK: - Update Helper Methods
+    
+    func updateTimerLabel() {
+        
+        timerLabel.text = timer.timerString()
+    }
+    
+    func updateProgressView() {
+        
+        let secondsElasped = totalSecondsSetOnTimer - Int(timer.seconds)
+        let progress = Float(secondsElasped) / Float(totalSecondsSetOnTimer)
+        
+        progressView.setProgress(progress, animated: true)
+        
+    }
+    
+    func updateTimerBasedViews() {
+        updateTimerLabel()
+        updateProgressView()
+    }
+    
+    func timerComplete() {
+        pickerStackView.hidden = false
+        timerLabel.hidden = true
+        progressView.hidden = true
+        startButton.setTitle("Start", forState: .Normal)
+    }
+    
 }
 
 
