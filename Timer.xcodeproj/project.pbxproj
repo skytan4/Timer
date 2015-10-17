@@ -15,6 +15,7 @@
 		01DE11891BD2204600D9B67F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11881BD2204600D9B67F /* TimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE118C1BD226D300D9B67F /* AlarmViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		01DE11901BD2287600D9B67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DE118E1BD2287600D9B67F /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		01DE11921BD2293500D9B67F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11911BD2293500D9B67F /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		01DE11881BD2204600D9B67F /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		01DE118C1BD226D300D9B67F /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		01DE118F1BD2287600D9B67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01DE11911BD2293500D9B67F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				01DE11531BD214E900D9B67F /* AppDelegate.swift */,
 				01DE11881BD2204600D9B67F /* TimerViewController.swift */,
 				01DE118C1BD226D300D9B67F /* AlarmViewController.swift */,
+				01DE11911BD2293500D9B67F /* Timer.swift */,
 				01DE115A1BD214E900D9B67F /* Assets.xcassets */,
 				01DE118E1BD2287600D9B67F /* Main.storyboard */,
 				01DE115C1BD214E900D9B67F /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				01DE11891BD2204600D9B67F /* TimerViewController.swift in Sources */,
 				01DE11541BD214E900D9B67F /* AppDelegate.swift in Sources */,
 				01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */,
+				01DE11921BD2293500D9B67F /* Timer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

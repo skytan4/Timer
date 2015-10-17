@@ -17,7 +17,7 @@ Students who complete this project independently are able to:
 
 ## Guide - Day 1
 
-Note: Try to avoid looking at the hints until you get stuck. Try to figure it out on your own.
+Note: Try to avoid looking at the hints until you get stuck or have attempted it on your own. Use the hints to check your progress.
 
 ### UI - Timer View
 
@@ -56,6 +56,25 @@ Build a view that allows the user to input a desired length of time and allows t
 1. Add an another ViewController to storyboard and a file for AlarmViewController. Make sure the ViewController custom class is set to the AlarmViewController.
 2. Add a label to the AlarmViewController that says "Alarm View Controller". This is just a placehold until the AlarmViewController is implemented tomorrow.
 3. Embed AlarmViewController in a UINavigationController. Add the UINavigationController as a viewController on the UITabBarController.
+
+### Implement Timer Class
+
+1. Create a new cocoa touch class called Timer which subclasses NSObject.
+2. Create static constant Strings for the TimerSecondTickNotification and TimerCompleteNotification.
+3. Create properties for a timer.
+	* HINT: 
+		* ```private(set) var seconds = NSTimeInterval(0)```
+		* ```private var timer: NSTimer?```
+		* ```var isOn: Bool``` (computed property, check whether the timer is nil or not, timer will only be nil when not running)
+4. Create a func setTime(second: NSTimeInterval).
+5. Create a func startTimer().
+	* HINT: If the timer property is nil, this will create a scheduled NSTimer and assign it to the timer property. The NSTimer should call the secondTick selector.
+6. Create a func stopTimer()
+	* HINT: If the timer property is set, this will invalidate the timer and set the timer property equal to nil
+7. Create a func secondTick()
+	* HINT: If the timer property is set, this function should decrease the seconds remaining on the timer by 1 and post a secondTickNotification. If the seconds have reached 0, it should also post a timerCompleteNotification and call stopTimer().
+8. Create a func timerString() -> String
+	* HINT: This method should take the number of seconds remaining and create a string that the user would expect to see on a timer.
 
 ### Black Diamonds
 
