@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		01DE11541BD214E900D9B67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11531BD214E900D9B67F /* AppDelegate.swift */; };
-		01DE11561BD214E900D9B67F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11551BD214E900D9B67F /* TimerViewController.swift */; };
-		01DE11591BD214E900D9B67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DE11571BD214E900D9B67F /* Main.storyboard */; };
 		01DE115B1BD214E900D9B67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DE115A1BD214E900D9B67F /* Assets.xcassets */; };
 		01DE115E1BD214E900D9B67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DE115C1BD214E900D9B67F /* LaunchScreen.storyboard */; };
 		01DE11691BD214E900D9B67F /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11681BD214E900D9B67F /* TimerTests.swift */; };
 		01DE11741BD214E900D9B67F /* TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11731BD214E900D9B67F /* TimerUITests.swift */; };
+		01DE11891BD2204600D9B67F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11881BD2204600D9B67F /* TimerViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE118C1BD226D300D9B67F /* AlarmViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		01DE11901BD2287600D9B67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DE118E1BD2287600D9B67F /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,6 @@
 /* Begin PBXFileReference section */
 		01DE11501BD214E900D9B67F /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DE11531BD214E900D9B67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01DE11551BD214E900D9B67F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		01DE11581BD214E900D9B67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01DE115A1BD214E900D9B67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01DE115D1BD214E900D9B67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01DE115F1BD214E900D9B67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +46,9 @@
 		01DE116F1BD214E900D9B67F /* TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DE11731BD214E900D9B67F /* TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUITests.swift; sourceTree = "<group>"; };
 		01DE11751BD214E900D9B67F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01DE11881BD2204600D9B67F /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		01DE118C1BD226D300D9B67F /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		01DE118F1BD2287600D9B67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				01DE11531BD214E900D9B67F /* AppDelegate.swift */,
-				01DE11551BD214E900D9B67F /* TimerViewController.swift */,
-				01DE11571BD214E900D9B67F /* Main.storyboard */,
+				01DE11881BD2204600D9B67F /* TimerViewController.swift */,
+				01DE118C1BD226D300D9B67F /* AlarmViewController.swift */,
 				01DE115A1BD214E900D9B67F /* Assets.xcassets */,
+				01DE118E1BD2287600D9B67F /* Main.storyboard */,
 				01DE115C1BD214E900D9B67F /* LaunchScreen.storyboard */,
 				01DE115F1BD214E900D9B67F /* Info.plist */,
 			);
@@ -228,9 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DE11901BD2287600D9B67F /* Main.storyboard in Resources */,
 				01DE115E1BD214E900D9B67F /* LaunchScreen.storyboard in Resources */,
 				01DE115B1BD214E900D9B67F /* Assets.xcassets in Resources */,
-				01DE11591BD214E900D9B67F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01DE11561BD214E900D9B67F /* TimerViewController.swift in Sources */,
+				01DE11891BD2204600D9B67F /* TimerViewController.swift in Sources */,
 				01DE11541BD214E900D9B67F /* AppDelegate.swift in Sources */,
+				01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,20 +296,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01DE11571BD214E900D9B67F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01DE11581BD214E900D9B67F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01DE115C1BD214E900D9B67F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				01DE115D1BD214E900D9B67F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01DE118E1BD2287600D9B67F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01DE118F1BD2287600D9B67F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -481,6 +485,7 @@
 				01DE117A1BD214E900D9B67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01DE117B1BD214E900D9B67F /* Build configuration list for PBXNativeTarget "TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +494,7 @@
 				01DE117D1BD214E900D9B67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01DE117E1BD214E900D9B67F /* Build configuration list for PBXNativeTarget "TimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +503,7 @@
 				01DE11801BD214E900D9B67F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,18 +8,46 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var hourPickerView: UIPickerView!
+    @IBOutlet weak var minutePickerView: UIPickerView!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var pickerStackView: UIStackView!
+    @IBOutlet weak var progressView: UIProgressView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        minutePickerView.selectRow(1, inComponent: 0, animated: false)
+        
+    }
+    
+    @IBAction func startButtonTapped() {
+    }
+    
+    @IBAction func pauseButtonTapped(sender: UIButton) {
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - UIPickerView Data Source
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
-
-
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == hourPickerView {
+            return 24
+        } else {
+            return 60
+        }
+    }
+    
+    //MARK: - UIPickerView Delegate
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(row)
+    }
 }
+
 
