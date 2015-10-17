@@ -30,6 +30,17 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
         minutePickerView.selectRow(1, inComponent: 0, animated: false)
         
+        view.layoutIfNeeded()
+        
+        pauseButton.layer.cornerRadius = pauseButton.bounds.height / 2
+        pauseButton.layer.masksToBounds = true
+        pauseButton.layer.borderWidth = 2.0
+        pauseButton.layer.borderColor = UIColor.blueColorTimer().CGColor
+        
+        startButton.layer.cornerRadius = startButton.bounds.height / 2
+        startButton.layer.masksToBounds = true
+        startButton.layer.borderWidth = 2.0
+        startButton.layer.borderColor = UIColor.lightBlueColorTimer().CGColor
     }
     
     @IBAction func startButtonTapped() {
@@ -41,12 +52,22 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
             progressView.hidden = true
             startButton.setTitle("Start", forState: .Normal)
             
+            startButton.setTitleColor(UIColor.lightBlueColorTimer(), forState: .Normal)
+            startButton.layer.borderColor = UIColor.lightBlueColorTimer().CGColor
+            pauseButton.setTitleColor(UIColor.blueColorTimer(), forState: .Normal)
+            pauseButton.layer.borderColor = UIColor.blueColorTimer().CGColor
+            
         } else {
             timerLabel.hidden = false
             progressView.setProgress(0.0, animated: false)
             progressView.hidden = false
             pickerStackView.hidden = true
             startButton.setTitle("Cancel", forState: .Normal)
+            
+            startButton.setTitleColor(UIColor.blueColorTimer(), forState: .Normal)
+            startButton.layer.borderColor = UIColor.blueColorTimer().CGColor
+            pauseButton.setTitleColor(UIColor.lightBlueColorTimer(), forState: .Normal)
+            pauseButton.layer.borderColor = UIColor.lightBlueColorTimer().CGColor
             
             let hours = hourPickerView.selectedRowInComponent(0)
             let minutes = minutePickerView.selectedRowInComponent(0) + (hours * 60)
@@ -106,6 +127,11 @@ class TimerViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         timerLabel.hidden = true
         progressView.hidden = true
         startButton.setTitle("Start", forState: .Normal)
+        
+        startButton.setTitleColor(UIColor.lightBlueColorTimer(), forState: .Normal)
+        startButton.layer.borderColor = UIColor.lightBlueColorTimer().CGColor
+        pauseButton.setTitleColor(UIColor.blueColorTimer(), forState: .Normal)
+        pauseButton.layer.borderColor = UIColor.blueColorTimer().CGColor
     }
     
 }

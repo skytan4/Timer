@@ -16,6 +16,8 @@
 		01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE118C1BD226D300D9B67F /* AlarmViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		01DE11901BD2287600D9B67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DE118E1BD2287600D9B67F /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		01DE11921BD2293500D9B67F /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11911BD2293500D9B67F /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
+		01DE11941BD2339E00D9B67F /* AppearanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11931BD2339E00D9B67F /* AppearanceController.swift */; settings = {ASSET_TAGS = (); }; };
+		01DE11961BD233A600D9B67F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11951BD233A600D9B67F /* Colors.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		01DE118C1BD226D300D9B67F /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		01DE118F1BD2287600D9B67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01DE11911BD2293500D9B67F /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		01DE11931BD2339E00D9B67F /* AppearanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceController.swift; sourceTree = "<group>"; };
+		01DE11951BD233A600D9B67F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				01DE11531BD214E900D9B67F /* AppDelegate.swift */,
+				01DE11931BD2339E00D9B67F /* AppearanceController.swift */,
+				01DE11951BD233A600D9B67F /* Colors.swift */,
 				01DE11881BD2204600D9B67F /* TimerViewController.swift */,
 				01DE118C1BD226D300D9B67F /* AlarmViewController.swift */,
 				01DE11911BD2293500D9B67F /* Timer.swift */,
@@ -262,9 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01DE11891BD2204600D9B67F /* TimerViewController.swift in Sources */,
+				01DE11961BD233A600D9B67F /* Colors.swift in Sources */,
 				01DE11541BD214E900D9B67F /* AppDelegate.swift in Sources */,
 				01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */,
 				01DE11921BD2293500D9B67F /* Timer.swift in Sources */,
+				01DE11941BD2339E00D9B67F /* AppearanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
