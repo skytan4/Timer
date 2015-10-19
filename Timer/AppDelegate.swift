@@ -9,10 +9,12 @@
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    static let kHasAskedPermissions = "kHasAskedPermissions"
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -38,7 +40,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+
     }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        
+        if notification.category == Alarm.kAlarmAlert {
+            
+            let alarmAlert = UIAlertController(title: "Alarm!", message: nil, preferredStyle: .Alert)
+            alarmAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            
+            window?.rootViewController?.presentViewController(alarmAlert, animated: true, completion: nil)
+            Alarm.alarmComplete()
+            
+        } else if notification.category == Timer.kTimerAlert {
+            let timerAlert = UIAlertController(title: "Timer Complete!", message: nil, preferredStyle: .Alert)
+            timerAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            
+            window?.rootViewController?.presentViewController(timerAlert, animated: true, completion: nil)
+        }
+    }
+
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.

@@ -16,10 +16,8 @@ Students who complete this project independently are able to:
 * Use UIAlertControllers to display alerts to user
 * Use UIProgressViews to display progress
 * Use CALayers to modify views' look
-* Use extenstive to add functionallity to existing classes
 
-## ---- Day 1 ----
-## Guide
+## Guide - Day 1
 
 Note: Try to avoid looking at the hints until you get stuck or have attempted it on your own. Use the hints to check your progress.
 
@@ -88,26 +86,14 @@ Build a view that allows the user to input a desired length of time and allows t
 	* HINT: You may need a variable to hold to total number of seconds that user set the timer to so you can update the progress view.
 3. Observe the timerCompleteNotification. The function this notification should call should reset the views to allow the user to start another timer.
 
-### Use UIAppearance and CALayers to modify the view's look
-
-1. Create a swift file called Colors.swift. Add an extention of UIColor and add five static methods that return custom colors for your app.
-2. Add icons to the tab bar items.
-	* HINT: [Icons 8](icons8.com) or [The Noun Project](thenounproject.com)
-3. Use UIAppearance and an AppearanceController to customize the appearance through the entire app.
-	* HINT: Don't forget to call the AppearanceControllers function in didFinishLaunchingWithOptions
-4. Use CALayer properties to make the buttons circular and have a border. 
-	* HINT: You will not need to import QuartzCore in swift
-	* HINT: User view.layoutIfNeeded() to get frame sizes based on constraints
-
 ### Black Diamonds
-
-* Implement pause feature
 
 ### Tests
 
 ## Contributions
 
 Please refer to CONTRIBUTING.md.
+
 
 ## Copyright
 

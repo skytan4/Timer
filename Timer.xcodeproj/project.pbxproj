@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01A6AB2E1BD4D7FD00293874 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6AB2D1BD4D7FD00293874 /* Alarm.swift */; settings = {ASSET_TAGS = (); }; };
 		01DE11541BD214E900D9B67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DE11531BD214E900D9B67F /* AppDelegate.swift */; };
 		01DE115B1BD214E900D9B67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01DE115A1BD214E900D9B67F /* Assets.xcassets */; };
 		01DE115E1BD214E900D9B67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DE115C1BD214E900D9B67F /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A6AB2D1BD4D7FD00293874 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		01DE11501BD214E900D9B67F /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01DE11531BD214E900D9B67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01DE115A1BD214E900D9B67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				01DE11881BD2204600D9B67F /* TimerViewController.swift */,
 				01DE118C1BD226D300D9B67F /* AlarmViewController.swift */,
 				01DE11911BD2293500D9B67F /* Timer.swift */,
+				01A6AB2D1BD4D7FD00293874 /* Alarm.swift */,
 				01DE115A1BD214E900D9B67F /* Assets.xcassets */,
 				01DE118E1BD2287600D9B67F /* Main.storyboard */,
 				01DE115C1BD214E900D9B67F /* LaunchScreen.storyboard */,
@@ -204,6 +207,7 @@
 				TargetAttributes = {
 					01DE114F1BD214E900D9B67F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = B9KMJ3NRM7;
 					};
 					01DE11631BD214E900D9B67F = {
 						CreatedOnToolsVersion = 7.0;
@@ -272,6 +276,7 @@
 				01DE11541BD214E900D9B67F /* AppDelegate.swift in Sources */,
 				01DE118D1BD226D300D9B67F /* AlarmViewController.swift in Sources */,
 				01DE11921BD2293500D9B67F /* Timer.swift in Sources */,
+				01A6AB2E1BD4D7FD00293874 /* Alarm.swift in Sources */,
 				01DE11941BD2339E00D9B67F /* AppearanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Timer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.DevMounta.Timer;
@@ -423,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Timer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.DevMounta.Timer;
